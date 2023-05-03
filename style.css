@@ -1,20 +1,26 @@
-:root{
-  --grid-size: 1;
-}
+/*:root{
+  --grid-size: 3;
+}*/
 
 .grid{
+  /*
   width: 100px;
-  height: 100px;
+  height: 100px;*/
+  width: 50%;
   background-color: red;
   border: solid blue 1px;
   display: grid;
   grid-gap: 1em;
-  grid-template-rows: repeat(var(--grid-size), 1fr);
-  grid-template-columns: repeat(var(--grid-size), 1fr);
+  /*functions for creating the grid, using the repeat function. calling the --grid-row or --grid-col property defined in the script.
+  the fr is for a fractional unit or a part of the total in which it is split*/
+  grid-template-rows: repeat(var(--grid-row), 1fr);
+  grid-template-columns: repeat(var(--grid-col), 1fr);
 }
 
 
 .grid-element {
+  width: 50px;
+  height: 50px;
   padding: 1em;
   border: 1px solid #ddd;
   text-align: center;
