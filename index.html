@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <!--let-s the explorer show pages that don't fulfill standards as if they run in previous IE versions-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--optimize for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Etch-A-Sketch</title>
 </head>
 <body>
-  <button class="reset-btn" id="reset-btn">Reset</button>
-  <div class="grid" id="grid">
-
+  <div class="sketch-pad">
+    <div class="title">
+      <h3 id="title1">Paint</h3>
+      <h1 id="title2">Etch A Sketch</h1>
+      <h3 id="title3">Create</h3>
+    </div>
+    <div class="container" id="grid"></div>
+    <div class="buttons">
+      <button class="colorBtn" id="blackBtn" onclick="changeColor('#000000')">Black</button>
+      <button class="colorBtn" id="grayBtn" onclick="changeColor('#808080')">Gray</button>
+      <button class="colorBtn" id="randomBtn" onclick="changeColor('random')">Rainbow/Random</button>
+      <button class="colorBtn" id="eraseBtn" onclick="changeColor('#ffffff')">Eraser</button>
+      <button class="colorBtn" id="resetBtn" onclick="cleanGrid()">Clean/Reset</button>
+    </div>
+    <div class="resize">
+      <input 
+      type="text" 
+      placeholder="Set size of how many squares: 2 - 100" 
+      onchange="changeGridSize(this.value)">
+      <button class="sizeBtn">Resize</button>
+    </div>
   </div>
+  <footer class="footer">
+    <a class="footer-link" href="" target="_blank" >Source</a>
+  </footer>
 </body>
 </html>
