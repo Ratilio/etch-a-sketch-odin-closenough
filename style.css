@@ -1,12 +1,12 @@
 body {
   background:#c267ce91;
   font-family: sans-serif;
-  padding: 10px 0px;
+  padding: 5px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 95vh;
 }
 .title {
   display: flex;
@@ -134,7 +134,7 @@ button:active {
 .footer {
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5px;
   color: black;
   font-weight: 900;
 }
